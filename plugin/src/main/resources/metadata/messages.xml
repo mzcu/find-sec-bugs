@@ -5752,4 +5752,18 @@ Transport.send(message);
     </BugPattern>
     <BugCode abbrev="SECSMTP">SMTP Header Injection</BugCode>
 
+     <!-- Spring unvalidated content type  -->
+    <Detector class="com.h3xstream.findsecbugs.spring.SpringUnvalidatedContentTypeDetector">
+        <Details>Detects missing validation of acceptable content-types for state-changing endpoints </Details>
+    </Detector>
+
+    <BugPattern type="SPRING_CONTENT_TYPE_UNVALIDATED">
+        <ShortDescription>Spring endpoint is not explicit about acceptable content types</ShortDescription>
+        <LongDescription>Supported content types are implicit and depend on runtime classpath</LongDescription>
+        <Details>
+            <![CDATA[ WIP ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="SECSCTU">Spring unvalidated endpoint</BugCode>
+
 </MessageCollection>
